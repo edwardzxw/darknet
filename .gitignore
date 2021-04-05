@@ -25,3 +25,10 @@ ehthumbs.db
 Icon?
 Thumbs.db
 *.swp
+
+# artifacts generated or used during my training
+backup/
+darknet53.conv.74
+libdarknet.a
+libdarknet.so
+
