@@ -21,7 +21,8 @@ labels_dir = os.path.join(stage_dir, 'data/baa/labels/')
 train_txt_path = os.path.join(stage_dir, 'data/baa/train.txt')
 val_txt_path = os.path.join(stage_dir, 'data/baa/val.txt')
 
-archive_base_dir = '/mnt/c/cygwin64/home/Edward/.virtualenvs/hualiang/bone_age_algorithm/Sdk/archive'
+#archive_base_dir = '/mnt/c/cygwin64/home/Edward/.virtualenvs/hualiang/bone_age_algorithm/Sdk/archive'
+archive_base_dir = '/mnt/hualiang_dev_shared/darknet/archive'
 
 # get a list of all yolo label txt files
 trainset_dir = os.path.join(archive_base_dir, 'boneage-training-dataset/boneage-training-dataset')

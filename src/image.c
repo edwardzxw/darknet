@@ -252,7 +252,12 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
                     strcat(labelstr, ", ");
                     strcat(labelstr, names[j]);
                 }
-                printf("%s: %.0f%%\n", names[j], dets[i].prob[j]*100);
+
+                // print names[j] without trailing break-line char will cause problem
+                // could be a bug with some invalid char in the char array at the end
+                // I've no time to resolve it by now anyway I'll leave a note here for future reference
+                printf(">>>>>>baa<<<<<< %d, 0, %s\n", i, names[j]);
+                printf(">>>>>>baa<<<<<< %d, 1, %.0f%%\n", i, dets[i].prob[j]*100);
             }
         }
         if(class >= 0){
@@ -289,6 +294,8 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
             if(right > im.w-1) right = im.w-1;
             if(top < 0) top = 0;
             if(bot > im.h-1) bot = im.h-1;
+
+            printf(">>>>>>baa<<<<<< %d, 2, %d, %d, %d, %d\n", i, left, top, right, bot);
 
             draw_box_width(im, left, top, right, bot, width, red, green, blue);
             if (alphabet) {
